@@ -1,0 +1,13 @@
+# Tested with Python 3.12 and 3.13.
+# Exact versions used when the pipeline was tested, for reproducibility.
+numpy==2.5.3
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.1
+xgboost==3.4.1
+optuna==5.0.0
+dice-ml==0.12
+fairlearn==0.15.0
+statsmodels==0.15.0
+matplotlib==3.11.2
+PyYAML==6.0.3

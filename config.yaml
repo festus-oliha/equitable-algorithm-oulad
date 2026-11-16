@@ -1,0 +1,49 @@
+# ---------------------------------------------------------------------------
+# Configuration for: Equitable Algorithmic Recourse for At-Risk Students
+# Author: Biodun Bolaji (MSc Computer Science)
+#
+# Every setting used in Chapter Three lives here, so the experiment can be
+# changed without editing code. Section numbers refer to Chapter Three.
+# ---------------------------------------------------------------------------
+
+# Folder that holds the 7 OULAD CSV files (courses.csv, studentVle.csv, ...)
+data_dir: data/raw
+
+# Where tables, figures, models and logs are written
+output_dir: outputs
+
+# Global random seed (Section 3.14: seeds are fixed for all stochastic steps)
+seed: 42
+
+# Snapshot weeks (Section 3.5.2). Day cutoff = week * 7
+weeks: [4, 8]
+
+# Data partitioning by presentation (Section 3.6)
+split:
+  train: ["2013B", "2013J"]
+  validation: ["2014B"]
+  test: ["2014J"]
+
+# Risk model (Section 3.7)
+model:
+  optuna_trials: 50          # Bayesian optimisation trials
+  cv_folds_retrain: 5        # folds used to pick the threshold of the retrained model (Section 3.12)
+
+# Actionability (Section 3.8)
+constraints:
+  upper_percentile: 99       # increase-only features are capped at this percentile of training data
+  min_studied_credits: 30
+
+# Counterfactual generation (Section 3.9)
+counterfactuals:
+  dice_method: random        # "random" (default) or "genetic"; see Chapter 3, Section 3.9.2
+  dice_k: 5                  # counterfactuals requested per student
+  dice_max_students: 800     # DiCE is slow; at-risk test students are sampled up to this number per week (0 = all)
+  nearest_batch: 256         # candidates checked per batch in Nearest Instance
+
+# Statistics (Sections 3.11 and 3.13)
+stats:
+  bootstrap_resamples: 2000
+  alpha: 0.05
+  h4_threshold: 0.20         # H4: more than 20% of recommendations lose validity
+  robustness_seeds: [1, 2, 3, 4, 5]

@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Data (download OULAD separately; do not commit it)
+data/raw/*.csv
+data/synthetic/
+
+# Outputs (regenerate by running the pipeline)
+outputs/tables/*.csv
+outputs/tables/*.json
+outputs/figures/*.png
+outputs/models/*.json
+outputs/*.md
+outputs/*.txt
+outputs/*.json
+
+# Editors
+.vscode/
+.idea/
+.DS_Store
