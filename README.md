@@ -1,6 +1,6 @@
 # Equitable Algorithmic Recourse for At-Risk Students
 
-Code for the MSc thesis **"Equitable Algorithmic Recourse for At-Risk Students: Fairness and Robustness of Counterfactual Explanations"** by festus O.
+Code for the MSc Research work **"Equitable Algorithmic Recourse for At-Risk Students: Fairness and Robustness of Counterfactual Explanations"** by festus O.
 
 The pipeline follows the steps:
 
