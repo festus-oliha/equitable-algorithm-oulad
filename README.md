@@ -4,18 +4,18 @@ Code for the MSc Research work **"Equitable Algorithmic Recourse for At-Risk Stu
 
 The pipeline follows the steps:
 
-| Step | Chapter 3 section | Code |
+| Step | Code |
 | --- | --- | --- |
-| Load OULAD, build week-4 and week-8 snapshots, split by presentation | 3.4-3.6 | `src/data_prep.py` |
-| XGBoost risk model, Optuna tuning, F1 threshold, logistic regression reference, prediction fairness | 3.7 | `src/model.py` |
-| Actionability constraints and MAD-scaled distance | 3.8, 3.9.1 | `src/constraints.py` |
-| DiCE and Nearest Instance counterfactuals | 3.9.2-3.9.3 | `src/counterfactuals.py` |
-| Coverage and quality metrics (RQ1, RQ2) | 3.10 | `src/metrics.py` |
-| Burden and recourse fairness (RQ3) | 3.11 | `src/fairness.py`, `src/groups.py` |
-| Robustness to retraining (RQ4) | 3.12 | `src/robustness.py` |
-| Hypothesis tests H1-H4 | 3.13 | `src/stats_tests.py` |
-| Figures | Chapter 4 | `src/figures.py` |
-| Runs everything | - | `src/run_all.py` |
+| Load OULAD, build week-4 and week-8 snapshots, split by presentation |`src/data_prep.py` |
+| XGBoost risk model, Optuna tuning, F1 threshold, logistic regression reference, prediction fairness |`src/model.py` |
+| Actionability constraints and MAD-scaled distance | `src/constraints.py` |
+| DiCE and Nearest Instance counterfactuals | `src/counterfactuals.py` |
+| Coverage and quality metrics (RQ1/OBJ1, RQ2/OBJ2) | `src/metrics.py` |
+| Burden and recourse fairness (RQ3/OBJ3) |  `src/fairness.py`, `src/groups.py` |
+| Robustness to retraining (RQ4) | `src/robustness.py` |
+| Hypothesis tests | `src/stats_tests.py` |
+| Figures | `src/figures.py` |
+| Runs everything | `src/run_all.py` |
 
 All settings are in `config.yaml`.
 
